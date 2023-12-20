@@ -1,6 +1,14 @@
-a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-max_num = -1000000
-for i in a:
-    if i > max_num:
-	max_num = i
-print(max_num)   
+def find_max():
+    n = int(input("Введите количество элементов в массиве: "))
+    array = []
+    for i in range(n):
+        element = int(input("Введите элемент массива: "))
+        array.append(element)
+    max_num = array[0]
+    for i in array:
+        if i > max_num:
+            max_num = i
+    return max_num
+
+maximum = find_max()
+print("Максимальный элемент в массиве:", maximum)
